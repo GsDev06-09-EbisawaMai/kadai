@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* ==========================================================================
+
+	common style
+	
+========================================================================== */
+body, div, p, ul, li, h1, h2, h3, h4, h5, h6, a {margin:0; padding:0; font-weight:normal; font-family: 'Alice',"ryo-display-plusn","Kokoro",sans-serif;}
+a, p, li, ol { color: rgba(30,27,27,1.00); white-space: normal;}
+body{ background: #fff; margin: 0;}
+*{ font-size:12px; /* 基準のフォントサイズを12pxとする */-webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */ }
+
+a {text-decoration:none; cursor:pointer; -webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all  1s;}
+a:hover { opacity: 0.7;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all  1s;}
+ul {list-style:none;}
+iframe {border:none;}
+::selection {background: rgba(252,237,237,1.00);}
+img{ vertical-align: bottom;}
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+	margin: 0 auto;
+}
+
+
+.f_img img{ max-width: 100%; width: 100%; height: auto;}
+.fb_iframe_widget > span { vertical-align: baseline !important;}
+button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+}
+/* clearfix */
+.cfx:after {content:""; display:block; clear:both; height:0; visibility: hidden;}
+/* fonts */
+
+.pc{display: block;}
+.sp{ display: none;}
+@media only screen and (max-width: 860px){
+.pc{display: none;}
+.sp{ display: block;}	
+}
+/* ==========================================================================
+
+	loading
+	
+========================================================================== */
+
+#windowFade {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000;
+  background: url(../img/loading_bg.png);
+  background-color: #fff;
+  background-size: cover;
+  text-align: center;
+}
+.load{
+	width: 80px; 
+	height: 80px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -40px;
+}
+.load_top{
+	width: 150px; 
+	height: 188px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -94px;
+	margin-left: -75px;
+}
+
+/* ==========================================================================
+
+	for PC style
+	
+========================================================================== */
+
+.panel{ position: relative;}
+section{ height: 100vh; width: 100%; position: relative;}
+section .logo{ position: absolute; top: 50px; left: 50%; margin-left: -50px; width: 100px; height: 100px; z-index: 9999;}
+.contents01{ background: url(../img/bg01.png)}
+.contents02{ background: url(../img/bg02.png)}
+.contents03{ background: url(../img/bg03.png)}
+.contents04{ background: url(../img/bg04.png)}
+.contents05{ background-color: #fff;}
+
+section .inner{ width: 80%; max-width: 1200px; margin: 0 auto; padding: 9% 0 0 0; height: 86vh;position: relative;}
+section .inner_bg{
+	position: relative;
+	background: url(../img/loading_bg.png);
+	background-color:rgba(255,255,255,0.86);
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 0;
+}
+
+
+section .box{
+	width: 100%;
+	padding: 5% 8%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+
+
+.contents05 .box{
+	width: 38%;
+	padding: 12% 8%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+.contents05 li{
+	width: 33%; padding: 0 12%;
+	position: relative;
+}
+.contents05 li .sub{
+	width: 15px;
+	position: absolute;
+	bottom: -32%;
+	left: 2px;
+}
+
+section .box .title_box{ width: 60px;}
+section .box .title_box .title{ width: 100%;}
+section .box .title_box .title_sub{ width: 23%; margin: 18% 0 0 20%;}
+section .box .txt_box{ width: 100%; margin: 10% 0 0 0;}
+section .box_inner{
+	width: 86%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+section .box_inner .left{ width: 50%; margin: 0 auto; padding: 0 6%;}
+section .box_inner .right{ width: 50%; margin: 0 auto;}
+
+
+.contents03 .box_inner{
+	width: 86%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+.contents03 .box_inner .left{ width: 25%; margin: 0 auto; padding: 0 4%;}
+.contents03 .box_inner .right{ width: 75%; margin: 0 auto;}
+
+.contents03 .access{
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+
+.contents03 .access .txt{ 
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+	width: 60%; padding: 0 9%;
+}
+
+.contents03 .access .map{
+	width: 50%; 
+}
+
+.contents03 .access .title_02{ 
+	width: 12%;
+	padding: 0 1%;
+	margin: -14% 0 0 0;
+}
+.contents03 .access .txt_02{ 
+	width: 85%;
+	padding: 0% 5%;
+}
+.contents03 .access .link a{ display: block; width: 100%; background: #0d234f; padding: 5% 14%; margin: 16px 0 0 0;}
+
+.contents04 .box_inner{
+	width: 86%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+.contents04 .box_inner .left{ width: 43%; margin: 0 auto; padding: 0 6%;}
+.contents04 .box_inner .right{ width: 57%; margin: 0 auto;}
+
+section .book{
+	width: 86%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+
+
+section .book li{ width: 50%; padding: 0 4%;}
+section .book .price{ margin: 16px 0 0 0;}
+section .book .link a{ display: block; width: 100%; background: #0d234f; padding: 5% 20%; margin: 16px 0 0 0;}
+
+.contents02 .map{
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */ 
+	display: flex;
+	-webkit-justify-content: space-between; /* Safari */
+	justify-content: space-between;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+	-webkit-flex-direction: row-reverse; /* Safari */
+	flex-direction:         row-reverse;
+}
+#map{width: 300px !important;height: 300px !important; margin: 0 auto;}
+#map_02{width: 100% !important; height: 300px !important; margin: 0 auto;}
+#map_03{width: 100% !important; height: 200px !important; margin: 0 auto;}
+#pano{width:  86% !important; height: 500px !important; margin: 0 auto;}
+.gmnoprint,.gm-style-mtc{ width: 105px !important;}
+
+
+.footer{ position: absolute; text-align: center; bottom:10px;  font-size: 10px; z-index: 9999; width: 100%; }
+
+
+
+
