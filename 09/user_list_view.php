@@ -1,5 +1,16 @@
 <?php
 //1.  DB接続します
+// session があるかないか正誤判定させる。
+session_start();
+//0.外部ファイル読み込み
+include("functions.php");
+
+if(
+    !isset($_SESSION["chk_ssid"]) == session_id()
+){
+    exit('不正アクセスです。');
+}
+
 try {
   $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {

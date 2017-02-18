@@ -11,7 +11,7 @@ if(
     !isset($_POST["lid"]) || $_POST["lid"]=="" || // lid が無い場合、||(OR)もしくは空の場合
     !isset($_POST["lpw"]) || $_POST["lpw"]==""
 ){
-    header("Location:login.php");
+    header("Location:index.php");
     exit();
 }
 
@@ -44,9 +44,8 @@ if( $val["id"] != "" ){
   header("Location:bm_list_view.php");
 }else{
   //logout処理を経由して全画面へ
-  header("Location:login.php");
+  header("Location:index.php");
+	exit();
 }
-
-exit();
 ?>
 
